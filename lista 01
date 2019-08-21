@@ -6,3 +6,129 @@ c = int(input("Digite uma valor inteiro: "))
 soma = a + b + c
 
 print("O valor da soma entre os valores inseridos:",soma)
+
+#questão2
+a = float(input("Digite um número real: "))
+
+potencia = a**2
+
+print("O quadrado do valor inserido: %.2f " % (potencia))
+
+#questão3
+a = int(input("Digite uma valor inteiro: "))
+b = int(input("Digite uma valor inteiro: "))
+
+resto = a % b
+
+print("O resto da divisão: ", resto)
+
+#questão4
+c = float(input("Digite o valor do comprimento: "))
+l = float(input("Digite o valor da largura: "))
+h = float(input("Digite o valor da altura: "))
+
+volume = c * l * h
+
+print("O valor do volume: %.2f" % (volume))
+
+#questão5
+k = float(input("Digite o valor da velocidade em km/h: "))
+
+m = ((k * 1000) / 3600)
+
+print("O valor correspondente em m/s: %.2f" % (m))
+
+#questão6
+mi = float(input("Digite o valor da distância em milhas: "))
+
+km = mi * 1.60934
+
+print("O valor correspondente em quilômetros: %.5f" % (km))
+
+#questão7
+R = float(input("Digite um valor em real: R$ "))
+
+D = R / 4.05
+
+print("A conversão em dólares é: US$ %.2f" % (D))
+
+#questão8
+a = int(input("Digite uma valor inteiro: "))
+b = int(input("Digite uma valor inteiro: "))
+c = int(input("Digite uma valor inteiro: "))
+
+soma = ((a**2) + (b**2) + (c**2))
+
+print("A soma dos quadrados dos valores inseridos: ",soma)
+
+#questão9
+a = int(input("Digite uma valor inteiro: "))
+
+soma = (3 * (a-1)) + (2 * (a+1))
+
+print("A soma soma do antecessor do triplo com o sucessor do dobro: ",soma)
+
+#questão10
+s = float(input("Digite o valor do salário: R$"))
+
+ns = s + (s * 0.25)
+
+print("Valor do novo salário: R$ %.2f" % (ns))
+
+#questão11
+d = int(input("Digite a quantidade de dias trabalhados: "))
+
+sbruto = float((30.00 * d) )
+sliq = float (sbruto - (sbruto * 0.08))
+
+print("Valor do salário líquido: R$ %.2f" %(sliq))
+
+#questão12
+#preço da compra
+R = float(input("Digite o valor da compra: R$"))
+
+#valor total a pagar com 10 de desconto
+vt = float(R - (R * 0.1))
+
+#valor de cada parcela no parcelamento em 6X sem juros
+p = float (R / 6)
+
+#comissão do vendedor caso venda a vista (5% sobre o valor com desconto)
+c = float (vt * 0.05)
+
+print("Valor com 10 por cento de desconto: R$ %.2f" % (vt))
+print("Valor de cada parcela no parcelamento em 6X sem juros: R$ %.2f" % (p))
+print("Comissão do vendedor caso venda a vista: R$ %.2f" % (c))
+
+#questão13
+I = int(input("Digite sua idade: "))
+A = int(input("Digite o ano atual: "))
+
+n = A - I
+
+print("Seu ano de nascimento: ",n)
+
+#questão14
+s = int(input("Digite um valor em segundos"))
+
+m = float(s / 60)
+h = float(s / 3600)
+
+print("Valor em minutos %.2f min, horas %.4f h e segundos %.0f s" % (m,h,s))
+
+#questão15
+u1 = float(input("Usuário 1 digite o valor da sua aposta: R$"))
+u2 = float(input("Usuário 2 digite o valor da sua aposta: R$"))
+u3 = float(input("Usuário 3 digite o valor da sua aposta: R$"))
+p = float(input("Digite o valor do prêmio: R$"))
+
+#soma das apostas
+su = u1 + u2 + u3
+
+#ganho de cada usuário
+g1 = (u1 * p) / su
+g2 = (u2 * p) / su
+g3 = (u3 * p) / su
+
+print("Usuário 1 ganhou: R$ %.2f , Usuário 2 ganhou: R$ %.2f e Usuário 3 ganhou: R$ %.2f" % (g1,g2,g3))
+
