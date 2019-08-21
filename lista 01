@@ -1,0 +1,8 @@
+#questão1
+a = int(input("Digite uma valor inteiro: "))
+b = int(input("Digite uma valor inteiro: "))
+c = int(input("Digite uma valor inteiro: "))
+
+soma = a + b + c
+
+print("O valor da soma entre os valores inseridos:",soma)
