@@ -142,8 +142,11 @@ sexo = input("Digite seu sexo (M/H): ")
 
 if sexo == 'H':
     peso_ideal = (72.7 * altura) - 58
-else:
+elif sexo == 'M':
     peso_ideal = (62.1 * altura) - 44.7
+else:
+    peso_ideal = 'error'
+    print(peso_ideal)
     
 print('Peso ideal: %.2f' % (peso_ideal))
 
