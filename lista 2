@@ -54,17 +54,20 @@ elif mes==4 or mes==6 or mes==9 or mes==11 :
         print ('Data não válida')
         
 
-else:
+elif mes == 2:
     if ano_bissexto == 0:
-        if dia<=29:
-          print('Data válida')
+        if dia<=29 and dia>=1:
+            print('Data válida')
         else:
             print ('Data não válida')
     else:
-        if dia<=28:
-          print('Data válida')
+        if dia<=28 and dia>=1:
+            print('Data válida')
         else:
             print ('Data não válida')
+            
+else:
+    print('Data não válida')
             
 '''04)Uma empresa vende o mesmo produto para quatro diferentes estados.
 Cada estado possui uma taxa diferente de imposto sobre o produto (MG 7%; SP
