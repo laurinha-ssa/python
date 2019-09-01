@@ -142,13 +142,21 @@ sexo = input("Digite seu sexo (M/H): ")
 
 if sexo == 'H':
     peso_ideal = (72.7 * altura) - 58
+    print('Peso ideal: %.2f' % (peso_ideal))
 elif sexo == 'M':
     peso_ideal = (62.1 * altura) - 44.7
+    print('Peso ideal: %.2f' % (peso_ideal))
 else:
     peso_ideal = 'error'
     print(peso_ideal)
     
-print('Peso ideal: %.2f' % (peso_ideal))
+    
+    
+    
+    
+    
+    
+    
 
 '' 09)Dados três valores A, B ,C verificar se eles podem ser valores dos
 lados de um triângulo e, se forem, se é um triângulo escaleno, equilátero ou
