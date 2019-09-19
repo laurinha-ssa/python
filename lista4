@@ -1,0 +1,205 @@
+#Escreva um programa que calcula o fatorial de um valor n (n!) dado pelo usuário
+#questão 1 ok
+num= int(input("Digite um valor inteiro: "))
+
+fatorial=1
+for i in range(1,num+1):
+    fatorial*=i
+    
+print(fatorial)
+
+# Escreva um programa que leia um valor inteiro e imprima a soma de todos os inteiros pares de zero até esse valor
+#questão 2 ok
+num = int(input("Digite um valor inteiro: "))
+
+soma=0
+for i in range(0,num+1):
+    if (i%2==0):
+        soma+=i
+print (soma)
+
+#questão 3 ok
+soma=0
+contador= 0
+num=1
+while num!=0:
+    num = int(input('Digite uma valor inteiro: '))
+    if num > 0:
+        soma+=num
+        contador+=1
+        
+if contador>0:
+    media = soma/contador
+    print (media)
+    
+#questão 4
+def menu():
+    print('1.Adição')
+    print('2.Subtração')
+    print('3.Multiplicação')
+    print('4.Divisão')
+    print('5.Saída')
+    
+    opcao = int(input('Selecione uma opção: '))
+    while (opcao<1 or opcao>5):
+        opcao = int(input('Selecione uma opção:' ))
+    while (opcao>=1 and opcao<=4):
+        print (opcao)
+        num1 = float(input('Digite o primeiro valor: '))
+        num2 = float(input('Digite o primeiro valor: '))
+        if opcao == 1:
+            print (num1+num2)
+        elif opcao == 2:
+            print (num1-num2)
+        elif opcao == 3:
+            print (num1*num2)      
+        elif opcao == 4:
+            if num2!=0:
+                print (num1/num2)
+            else:
+                print('Denominador inválido')
+        while opcao!=5:
+            menu()   
+    if opcao == 5:
+        print(opcao)
+        saida(5)
+        
+def saida(n):
+    while n==5:
+        break
+menu()    
+
+#questão 5
+ef floyd(N):
+    num=1
+    for i in range(1,N+1):
+        for j in range(1,i+1):
+            print(num, end=" ")
+            num+=1
+        print()
+            
+
+N = int(input('Digite o número inteiro positivo: '))
+if N>0:
+    floyd(N)
+while N<0:
+    N = int(input('Digite o número inteiro positivo: '))
+
+'''Escreva uma função chamada escalas que recebe três parâmetros: inicio, m e passo, referentes a um intervalo de temperatura em graus Celsius. Sua função deve imprimir n linhas contendo uma tabela de conversão de graus Celsius para Fahrenheit e Kelvin nessa ordem. Escreva também o código principal (fora da função) onde os valores inicio, m e passo serão lidos do usuário.'''
+#questão 6 ok
+def escalas(inicio, fim, passo):
+    
+    for i in range(inicio, fim+passo, passo):
+        Fahrenheit = (i * (9/5))+32
+        Kelvin = i + 273
+        print ('%d°C %d°F %dK' % (i,Fahrenheit,Kelvin))
+        
+inicio = int(input('Digite a temperatura de inicio em celsius: '))
+fim = int(input("Digite a temperatura de final em celsius:"))
+passo = int(input('Digite a variação da temperatura: '))
+
+escalas(inicio, fim, passo)
+
+#questão7
+'''Escreva a função mdc4(a,b,c,d) que retorna o máximo divisor comum entre a, b, c e d. Dica: O mdc(a,b,c) = mdc(a, mdc(b,c) )'''
+
+def mdc(a,b,c,d):
+    maior=0
+    if mdc1(a,b)>maior:
+        maior = mdc1(a,b)
+        menor = mdc2(c,d)
+    else:
+        maior=mdc2(c,d)
+        menor=mdc1(a,b)        
+    resto=None 
+    while resto != 0:
+        resto= maior % menor
+        maior = menor 
+        menor = resto
+    return maior
+def mdc1(a,b):
+    maior=0
+    if a>maior:
+        maior = a
+        menor = b
+    else:
+        maior=b
+        menor=a        
+    resto=None 
+    while resto != 0:
+        resto= maior % menor
+        maior = menor 
+        menor = resto
+    return maior
+def mdc2(c,d):
+    maior=0
+    if c>maior:
+        maior = c
+        menor = d
+    else:
+        maior=d
+        menor=c
+    resto=None 
+    while resto != 0:
+        resto= maior % menor
+        maior = menor 
+        menor = resto
+    return maior
+
+
+mdc(6,12,15,15)
+
+#questão 8 ok
+
+salario=2000.00
+ano_atual=int(input('digite o ano atual: '))
+
+tempo=ano_atual-1995
+aumento = 1.5/100
+
+for i in range(1,tempo+1):
+    salario = salario + (2000*(aumento))
+    aumento*=2
+
+print('O valor do salario atual:R$%.2f'  % (salario))
+
+#questão 9 ok
+soma=0
+maior=0
+par=0
+contador_par=0
+contador_primo=0
+num=int(input('Digite um valor inteiro: '))
+menor = num
+while num!=0:
+    soma+=num
+    if num>maior:
+        maior=num
+    elif num<menor:
+        menor = num
+    if (num % 2 == 0):
+        par+=num
+        contador_par+=1
+    if contador_par>0:
+        media = (par/contador_par)
+    else:
+        media = 0
+    contador=0
+    for i in range(1,num+1):
+        divisao = num % i
+        if divisao == 0:
+            contador+=1
+    if contador== 2:
+        contador_primo+=1
+    num=int(input('Digite um valor inteiro: '))
+
+print ('Soma=',soma)
+print ('Maior=',maior)
+print ('Menor=',menor)
+print ('Média dos numeros pares=', media)
+print("Quantidade de números primos:", contador_primo)
+while num ==0:
+    break
+    
+#questão 10
+
